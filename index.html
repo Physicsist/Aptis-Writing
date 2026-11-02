@@ -1,0 +1,1664 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Aptis Writing P1–P4 Master (Full Club Topics & Emails 2026)</title>
+    <style>
+        :root {
+            --bg: #f1f5f9;
+            --card: #ffffff;
+            --text: #0f172a;
+            --subtext: #475569;
+            --navy: #0f296b;
+            --primary: #1565c0;
+            --primary-hover: #0d47a1;
+            --primary-light: #dbeafe;
+            --formal: #6d28d9;
+            --formal-light: #ede9fe;
+            --success: #16a34a;
+            --success-bg: #dcfce7;
+            --warning-bg: #fef3c7;
+            --warning-text: #92400e;
+            --danger: #dc2626;
+            --border: #cbd5e1;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.5;
+            padding: 12px 12px 45px;
+            max-width: 840px;
+            margin: 0 auto;
+        }
+
+        /* HEADER & PART NAVIGATION */
+        .app-header {
+            background: var(--card);
+            padding: 14px 16px;
+            border-radius: 14px;
+            box-shadow: 0 2px 8px rgba(15, 41, 107, 0.06);
+            border: 1px solid var(--border);
+            border-top: 4px solid var(--primary);
+            margin-bottom: 12px;
+        }
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+        h1 { font-size: 1.18rem; font-weight: 800; color: var(--navy); }
+        .header-actions {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+        .mode-switch-btn {
+            padding: 6px 12px;
+            border-radius: 99px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            border: 1.5px solid var(--primary);
+            background: #ffffff;
+            color: var(--primary);
+            cursor: pointer;
+        }
+        .mode-switch-btn.active {
+            background: var(--primary);
+            color: #ffffff;
+        }
+
+        /* 5 MAIN PART TABS (P1, P2, P3, P4-INFORMAL, P4-FORMAL) */
+        .part-tabs {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 6px;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 680px) {
+            .part-tabs { grid-template-columns: repeat(2, 1fr); }
+            .part-tabs button:last-child { grid-column: span 2; }
+        }
+        .part-tab {
+            padding: 9px 8px;
+            border-radius: 9px;
+            border: 1px solid var(--border);
+            background: #f8fafc;
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--subtext);
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.15s;
+        }
+        .part-tab span {
+            display: block;
+            font-size: 0.72rem;
+            font-weight: 500;
+            opacity: 0.85;
+            margin-top: 1px;
+        }
+        .part-tab.active {
+            background: var(--primary);
+            color: #ffffff;
+            border-color: var(--primary);
+        }
+
+        /* TOPIC SELECTOR ROW */
+        .controls-row {
+            display: grid;
+            grid-template-columns: 1fr auto auto;
+            gap: 8px;
+        }
+        @media (max-width: 580px) {
+            .controls-row { grid-template-columns: 1fr 1fr; }
+            .controls-row select { grid-column: span 2; }
+        }
+        select, button {
+            padding: 9px 12px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            background: #ffffff;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text);
+            cursor: pointer;
+        }
+        button:active { transform: scale(0.98); }
+
+        /* PROGRESS TRACK */
+        .progress-track {
+            width: 100%;
+            height: 8px;
+            background: #e2e8f0;
+            border-radius: 99px;
+            overflow: hidden;
+            margin-bottom: 14px;
+        }
+        .progress-fill {
+            height: 100%;
+            background: var(--success);
+            width: 0%;
+            transition: width 0.3s ease;
+            border-radius: 99px;
+        }
+
+        /* MAIN WORKSPACE CARD */
+        .main-card {
+            background: var(--card);
+            border-radius: 18px;
+            padding: 20px 18px;
+            box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
+            border: 1px solid #e2e8f0;
+            margin-bottom: 16px;
+        }
+        .badges-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+        .badges-left {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .pill {
+            padding: 5px 12px;
+            border-radius: 99px;
+            font-size: 0.76rem;
+            font-weight: 800;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+        }
+        .pill-part { background: var(--primary-light); color: var(--primary); }
+        .pill-formal { background: var(--formal-light); color: var(--formal); }
+        .pill-club { background: #f1f5f9; color: #1e293b; border: 1px solid #e2e8f0; }
+        .pill-hot { background: #fef3c7; color: #b45309; }
+        .step-counter {
+            font-size: 0.92rem;
+            font-weight: 800;
+            color: var(--subtext);
+        }
+
+        /* EXAM QUESTION BOX */
+        .exam-question-box {
+            background: #f0f4ff;
+            border: 1px solid #bfdbfe;
+            padding: 10px 14px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            color: var(--navy);
+            margin-bottom: 12px;
+        }
+        .exam-question-box strong { color: var(--primary); }
+
+        .step-label {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 0.92rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 6px;
+        }
+
+        /* VIETNAMESE PROMPT BOX */
+        .vi-prompt-box {
+            background: #f8fafc;
+            border-left: 4px solid var(--primary);
+            padding: 14px 16px;
+            border-radius: 8px 12px 12px 8px;
+            font-size: 1.04rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .instruction-hint {
+            font-size: 0.86rem;
+            color: var(--subtext);
+            margin-bottom: 8px;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* MODE 1: CHUNKING DROP ZONE */
+        .answer-zone {
+            min-height: 82px;
+            border: 2px dashed #cbd5e1;
+            border-radius: 14px;
+            padding: 12px;
+            background: #fcfdff;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 14px;
+            transition: all 0.2s ease;
+        }
+        .answer-zone.correct-zone {
+            border-style: solid;
+            border-color: var(--success);
+            background: var(--success-bg);
+        }
+        .answer-zone.wrong-zone {
+            border-style: solid;
+            border-color: var(--danger);
+            background: #fef2f2;
+        }
+        .zone-placeholder {
+            color: #94a3b8;
+            font-size: 0.94rem;
+            padding: 4px 6px;
+            user-select: none;
+        }
+
+        .chunks-pool {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+            margin-bottom: 18px;
+            min-height: 46px;
+        }
+        .chunk-btn {
+            padding: 10px 14px;
+            border-radius: 11px;
+            border: 1.5px solid #cbd5e1;
+            background: #ffffff;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text);
+            box-shadow: 0 2px 4px rgba(15, 23, 42, 0.04);
+            cursor: pointer;
+            user-select: none;
+        }
+        .chunk-btn:hover {
+            border-color: var(--primary);
+            background: #f8fafc;
+        }
+        .chunk-btn.in-zone {
+            background: #eff6ff;
+            border-color: #93c5fd;
+            color: #1e3a8a;
+        }
+        .answer-zone.correct-zone .chunk-btn {
+            background: #ffffff;
+            border-color: var(--success);
+            color: #065f46;
+        }
+
+        /* MODE 2: TYPING BOX */
+        .typing-container {
+            margin-bottom: 16px;
+            display: none;
+        }
+        .typing-container.show { display: block; }
+        .typing-textarea {
+            width: 100%;
+            min-height: 95px;
+            padding: 12px 14px;
+            border-radius: 12px;
+            border: 2px solid var(--border);
+            font-family: inherit;
+            font-size: 0.98rem;
+            line-height: 1.5;
+            resize: vertical;
+        }
+        .typing-textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        .typing-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 6px;
+            font-size: 0.82rem;
+            color: var(--subtext);
+            font-weight: 600;
+        }
+
+        /* SOLUTION BANNER */
+        .solution-banner {
+            display: none;
+            margin-bottom: 16px;
+            padding: 12px 14px;
+            border-radius: 10px;
+            background: #ecfdf5;
+            border: 1px solid #6ee7b7;
+            color: #065f46;
+            font-size: 0.95rem;
+            font-weight: 700;
+        }
+        .solution-banner.show { display: block; }
+
+        /* 3 UTILITY BUTTONS */
+        .utility-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+        .util-btn {
+            padding: 11px 10px;
+            border-radius: 11px;
+            border: none;
+            font-size: 0.9rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+        .btn-listen { background: #f1f5f9; color: #0f172a; }
+        .btn-listen:hover { background: #e2e8f0; }
+        .btn-answer { background: var(--warning-bg); color: var(--warning-text); }
+        .btn-answer:hover { background: #fde68a; }
+        .btn-bookmark { background: #f1f5f9; color: #0f172a; }
+        .btn-bookmark.bookmarked { background: #fee2e2; color: #b91c1c; }
+
+        /* 2 NAVIGATION BUTTONS */
+        .nav-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .btn-prev {
+            padding: 13px;
+            border-radius: 11px;
+            border: none;
+            background: #f1f5f9;
+            color: #0f172a;
+            font-size: 0.95rem;
+            font-weight: 700;
+        }
+        .btn-prev:hover { background: #e2e8f0; }
+        .btn-next {
+            padding: 13px;
+            border-radius: 11px;
+            border: none;
+            background: var(--primary);
+            color: #ffffff;
+            font-size: 0.95rem;
+            font-weight: 700;
+        }
+        .btn-next:hover { background: var(--primary-hover); }
+
+        /* FULL PASSAGE / FULL EMAIL OVERVIEW */
+        .full-email-card {
+            background: var(--card);
+            border-radius: 16px;
+            padding: 18px;
+            border: 1px solid var(--border);
+            box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+        }
+        .full-email-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px dashed var(--border);
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .full-email-title {
+            font-size: 0.95rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+        .email-sentence-item {
+            padding: 9px 11px;
+            border-radius: 8px;
+            margin-bottom: 6px;
+            cursor: pointer;
+            border-left: 3px solid transparent;
+            transition: all 0.15s;
+        }
+        .email-sentence-item:hover { background: #f8fafc; }
+        .email-sentence-item.current-sen {
+            background: #eff6ff;
+            border-left-color: var(--primary);
+        }
+        .email-sentence-item.done-sen .sen-en {
+            color: var(--success);
+            font-weight: 700;
+        }
+        .sen-step-tag {
+            font-size: 0.74rem;
+            font-weight: 700;
+            color: var(--subtext);
+            text-transform: uppercase;
+            display: block;
+        }
+        .sen-en {
+            font-size: 0.94rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+        .sen-vi {
+            font-size: 0.82rem;
+            color: var(--subtext);
+        }
+        .word-count-summary {
+            margin-top: 10px;
+            padding: 10px 12px;
+            background: #f8fafc;
+            border-radius: 8px;
+            font-size: 0.84rem;
+            color: var(--navy);
+            font-weight: 700;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        /* MODAL ADD / EDIT */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.55);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            z-index: 999;
+        }
+        .modal-overlay.show { display: flex; }
+        .modal-box {
+            background: #ffffff;
+            width: 100%;
+            max-width: 660px;
+            border-radius: 16px;
+            padding: 20px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        .modal-box textarea, .modal-box input {
+            width: 100%;
+            padding: 9px 12px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            margin-top: 4px;
+            margin-bottom: 12px;
+            font-family: inherit;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<header class="app-header">
+    <div class="header-top">
+        <h1>✍️ APTIS WRITING P1–P4 MASTER (Tủ 2026)</h1>
+        <div class="header-actions">
+            <button class="mode-switch-btn active" id="modeChunkBtn" onclick="setPracticeMode('chunk')">🧩 Ghép cụm từ</button>
+            <button class="mode-switch-btn" id="modeTypeBtn" onclick="setPracticeMode('type')">⌨️ Gõ phím</button>
+            <button class="mode-switch-btn" id="savedFilterBtn" onclick="toggleSavedFilter()">⭐ Đã lưu (<span id="savedCount">0</span>)</button>
+        </div>
+    </div>
+
+    <!-- 5 TAB CHỌN PHẦN THI WRITING P1 -> P4 -->
+    <div class="part-tabs">
+        <button class="part-tab" id="ptab-P1" onclick="selectPart('P1')">
+            PART 1
+            <span>5 câu ngắn (1–5 từ)</span>
+        </button>
+        <button class="part-tab" id="ptab-P2" onclick="selectPart('P2')">
+            PART 2
+            <span>Đoạn ngắn (20–30 từ)</span>
+        </button>
+        <button class="part-tab" id="ptab-P3" onclick="selectPart('P3')">
+            PART 3
+            <span>3 câu Chat (30–40 từ)</span>
+        </button>
+        <button class="part-tab active" id="ptab-P4_INF" onclick="selectPart('P4_INF')">
+            PART 4 • INFORMAL
+            <span>Đầy đủ 6 câu (~50 từ)</span>
+        </button>
+        <button class="part-tab" id="ptab-P4_FOR" onclick="selectPart('P4_FOR')">
+            PART 4 • FORMAL
+            <span>Đầy đủ 6 câu (120–150 từ)</span>
+        </button>
+    </div>
+
+    <div class="controls-row">
+        <select id="deckSelect" onchange="changeDeck(this.value)"></select>
+        <button onclick="openCustomModal()">➕ Sửa / Thêm bài mẫu</button>
+        <button onclick="resetCurrentDeck()">🔄 Làm lại bài này</button>
+    </div>
+</header>
+
+<!-- THANH TIẾN ĐỘ -->
+<div class="progress-track">
+    <div class="progress-fill" id="progressBar"></div>
+</div>
+
+<!-- KHUNG LUYỆN TẬP CHÍNH -->
+<main class="main-card">
+    <div class="badges-row">
+        <div class="badges-left">
+            <span class="pill pill-part" id="badgePart">PART 4 • INFORMAL EMAIL</span>
+            <span class="pill pill-club" id="badgeClub">FOOD CLUB</span>
+            <span class="pill pill-hot">🔥 TỦ 2026</span>
+        </div>
+        <div class="step-counter" id="stepCounter">Câu 1/6</div>
+    </div>
+
+    <!-- ĐỀ BÀI TIẾNG ANH CHUẨN PHÒNG THI -->
+    <div class="exam-question-box" id="examPromptBox"></div>
+
+    <div class="step-label">
+        <span id="stepTitle">📌 Bước 1: Chào bạn & mở đầu thư</span>
+        <span id="stepWordCount" style="font-size:0.8rem; color:var(--subtext);">Số từ câu này: 0 từ</span>
+    </div>
+
+    <!-- NGHĨA TIẾNG VIỆT -->
+    <div class="vi-prompt-box" id="viPrompt"></div>
+
+    <!-- CHẾ ĐỘ 1: GHÉP CỤM TỪ (CHUNKING) -->
+    <div id="chunkModeArea">
+        <div class="instruction-hint">
+            <span>👇 Chạm vào các cụm từ bên dưới để ghép thành câu hoàn chỉnh:</span>
+        </div>
+        <div class="answer-zone" id="answerZone"></div>
+        <div class="chunks-pool" id="chunksPool"></div>
+    </div>
+
+    <!-- CHẾ ĐỘ 2: GÕ PHÍM (TYPING) -->
+    <div class="typing-container" id="typeModeArea">
+        <div class="instruction-hint">
+            <span>⌨️ Gõ câu tiếng Anh tương ứng vào ô bên dưới:</span>
+            <button onclick="checkTypedAnswer()" style="padding:4px 10px; font-size:0.8rem; background:var(--primary); color:#fff; border:none;">✔ Kiểm tra câu gõ</button>
+        </div>
+        <textarea class="typing-textarea" id="typingInput" placeholder="Gõ câu trả lời tiếng Anh của bạn tại đây..." oninput="handleTypingInput()"></textarea>
+        <div class="typing-meta">
+            <span id="typingLiveWords">Số từ đã gõ: 0 từ</span>
+            <span id="typingStatusText"></span>
+        </div>
+    </div>
+
+    <div class="solution-banner" id="solutionBanner"></div>
+
+    <!-- 3 NÚT TIỆN ÍCH -->
+    <div class="utility-row">
+        <button class="util-btn btn-listen" onclick="speakCurrentSentence()">🔊 Nghe</button>
+        <button class="util-btn btn-answer" onclick="toggleShowAnswer()">💡 Đáp án</button>
+        <button class="util-btn btn-bookmark" id="bookmarkBtn" onclick="toggleBookmark()">☆ Đánh dấu</button>
+    </div>
+
+    <!-- 2 NÚT ĐIỀU HƯỚNG -->
+    <div class="nav-row">
+        <button class="btn-prev" onclick="prevStep()">← Câu trước</button>
+        <button class="btn-next" onclick="nextStep()">Câu tiếp theo →</button>
+    </div>
+</main>
+
+<!-- KHUNG XEM TOÀN BỘ BÀI VIẾT / ĐOẠN EMAIL HOÀN CHỈNH -->
+<section class="full-email-card">
+    <div class="full-email-header">
+        <span class="full-email-title" id="fullEmailHeaderTitle">📄 Toàn bộ bài viết / đoạn Email</span>
+        <div style="display:flex; gap:6px; flex-wrap:wrap;">
+            <button onclick="speakEntireDeck()" style="padding:5px 10px; font-size:0.8rem;">🔊 Nghe toàn bài</button>
+            <button onclick="copyEntireDeck()" style="padding:5px 10px; font-size:0.8rem;">📋 Copy bài mẫu</button>
+            <button onclick="toggleMaskFullEmail()" style="padding:5px 10px; font-size:0.8rem;" id="maskBtn">🙈 Ẩn chữ Tiếng Anh</button>
+        </div>
+    </div>
+    <div id="fullEmailList"></div>
+    <div class="word-count-summary" id="totalWordCountBar"></div>
+</section>
+
+<!-- MODAL THÊM / SỬA BÀI MẪU -->
+<div class="modal-overlay" id="customModal">
+    <div class="modal-box">
+        <h3 style="margin-bottom:8px; color:var(--primary);">➕ Chỉnh sửa / Thêm bài mẫu Writing P1–P4</h3>
+        <p style="font-size:0.82rem; color:var(--subtext); margin-bottom:10px;">
+            Mỗi dòng nhập theo cú pháp: <strong>Tên bước | Câu tiếng Việt | Câu tiếng Anh (ngăn cách các cụm bằng dấu / )</strong>
+        </p>
+        <label style="font-size:0.84rem; font-weight:700;">Tên Câu lạc bộ (Topic):</label>
+        <input type="text" id="customClubInput" placeholder="VD: FOOD CLUB">
+        <label style="font-size:0.84rem; font-weight:700;">Đề bài tiếng Anh (Prompt):</label>
+        <input type="text" id="customPromptInput" placeholder="VD: Write an email to your friend and the club manager...">
+        <label style="font-size:0.84rem; font-weight:700;">Danh sách đầy đủ các câu:</label>
+        <textarea id="customLinesInput" rows="8"></textarea>
+        <div style="display:flex; gap:10px; justify-content:flex-end;">
+            <button onclick="closeCustomModal()">Huỷ</button>
+            <button style="background:var(--primary); color:#fff; border:none;" onclick="saveCustomDeck()">💾 Lưu bài mẫu</button>
+        </div>
+    </div>
+</div>
+
+<script>
+// KHO DỮ LIỆU ĐẦY ĐỦ CHO CẢ 4 PHẦN WRITING (PART 1, PART 2, PART 3, PART 4 INFORMAL & FORMAL)
+const DEFAULT_WRITING_DATA = [
+    // =========================================================================
+    // PART 1: 5 CÂU TRẢ LỜI NGẮN (1 - 5 TỪ / CÂU)
+    // =========================================================================
+    {
+        id: "p1_set1",
+        part: "P1",
+        partLabel: "PART 1 • SHORT ANSWERS (1–5 WORDS)",
+        club: "ALL CLUBS (SET 1)",
+        title: "Part 1 – Bộ 1: Thông tin cá nhân & Sở thích thường gặp",
+        examPrompt: "Answer 5 short questions using 1 to 5 words for each question.",
+        steps: [
+            {
+                step: "Câu 1/5: How are you today? (Hôm nay bạn thế nào?)",
+                vi: "Tôi cảm thấy rất khỏe, cảm ơn.",
+                chunks: ["I feel very good,", "thanks."]
+            },
+            {
+                step: "Câu 2/5: What is your favorite season? (Mùa yêu thích của bạn là gì?)",
+                vi: "Mùa yêu thích của tôi là mùa thu.",
+                chunks: ["My favorite season", "is autumn."]
+            },
+            {
+                step: "Câu 3/5: What do you do in your free time? (Bạn làm gì vào thời gian rảnh?)",
+                vi: "Tôi thường nghe nhạc nhẹ.",
+                chunks: ["I usually listen", "to soft music."]
+            },
+            {
+                step: "Câu 4/5: How do you travel to work/school? (Bạn đi làm/đi học bằng gì?)",
+                vi: "Tôi đi làm bằng xe máy.",
+                chunks: ["I go to work", "by motorbike."]
+            },
+            {
+                step: "Câu 5/5: What is your favorite food? (Món ăn yêu thích của bạn là gì?)",
+                vi: "Tôi thích ăn phở bò.",
+                chunks: ["I love eating", "beef noodle soup."]
+            }
+        ]
+    },
+    {
+        id: "p1_set2",
+        part: "P1",
+        partLabel: "PART 1 • SHORT ANSWERS (1–5 WORDS)",
+        club: "ALL CLUBS (SET 2)",
+        title: "Part 1 – Bộ 2: Thói quen hàng ngày & Cuối tuần",
+        examPrompt: "Answer 5 short questions using 1 to 5 words for each question.",
+        steps: [
+            {
+                step: "Câu 1/5: Where do you live? (Bạn sống ở đâu?)",
+                vi: "Tôi sống ở thành phố Hà Nội.",
+                chunks: ["I live in", "Hanoi city."]
+            },
+            {
+                step: "Câu 2/5: Who do you live with? (Bạn sống cùng với ai?)",
+                vi: "Tôi sống cùng với gia đình mình.",
+                chunks: ["I live with", "my family."]
+            },
+            {
+                step: "Câu 3/5: What time do you usually get up? (Bạn thường dậy lúc mấy giờ?)",
+                vi: "Tôi thường thức dậy lúc 6 giờ sáng.",
+                chunks: ["I usually get up", "at 6 a.m."]
+            },
+            {
+                step: "Câu 4/5: What did you do last night? (Tối qua bạn đã làm gì?)",
+                vi: "Tôi đã xem một bộ phim.",
+                chunks: ["I watched", "a movie."]
+            },
+            {
+                step: "Câu 5/5: What kind of movies do you like? (Bạn thích thể loại phim nào?)",
+                vi: "Tôi thực sự thích phim hài.",
+                chunks: ["I really like", "comedy movies."]
+            }
+        ]
+    },
+
+    // =========================================================================
+    // PART 2: VIẾT ĐOẠN NGẮN (20 - 30 TỪ)
+    // =========================================================================
+    {
+        id: "p2_food",
+        part: "P2",
+        partLabel: "PART 2 • FORM FILLING (20–30 WORDS)",
+        club: "FOOD CLUB",
+        title: "Part 2 – Food Club: Please tell us why you are interested in food and cooking",
+        examPrompt: "Question: Please tell us why you are interested in food and cooking? (Write 20–30 words)",
+        steps: [
+            {
+                step: "Câu 1/3: Nêu sở thích nấu ăn từ nhỏ",
+                vi: "Tôi thực sự yêu thích việc nấu ăn vì nó giúp tôi thư giãn sau những giờ làm việc căng thẳng.",
+                chunks: ["I really love cooking", "because it helps me", "relax after stressful", "working hours."]
+            },
+            {
+                step: "Câu 2/3: Lợi ích đối với sức khỏe & gia đình",
+                vi: "Ngoài ra, tôi thích chuẩn bị những bữa ăn lành mạnh và ngon miệng cho các thành viên trong gia đình vào mỗi cuối tuần.",
+                chunks: ["Besides, I enjoy preparing", "healthy and delicious meals", "for my family members", "every weekend."]
+            },
+            {
+                step: "Câu 3/3: Mong muốn khi tham gia CLB",
+                vi: "Vì vậy, tôi tham gia câu lạc bộ này để học thêm nhiều công thức nấu ăn mới.",
+                chunks: ["Therefore, I joined", "this club to learn", "more new recipes."]
+            }
+        ]
+    },
+    {
+        id: "p2_english",
+        part: "P2",
+        partLabel: "PART 2 • FORM FILLING (20–30 WORDS)",
+        club: "ENGLISH CLUB",
+        title: "Part 2 – English Club: Why do you want to join the English club?",
+        examPrompt: "Question: Please tell us why you want to join the English club? (Write 20–30 words)",
+        steps: [
+            {
+                step: "Câu 1/3: Nêu lý do học tiếng Anh",
+                vi: "Tôi muốn tham gia câu lạc bộ tiếng Anh vì tôi rất thích học các ngôn ngữ mới và khám phá các nền văn hóa.",
+                chunks: ["I want to join", "the English club because", "I love learning new languages", "and exploring cultures."]
+            },
+            {
+                step: "Câu 2/3: Mục tiêu cải thiện giao tiếp",
+                vi: "Hơn nữa, việc luyện nói tiếng Anh hàng tuần cùng các thành viên sẽ giúp tôi tự tin hơn trong công việc.",
+                chunks: ["Moreover, practicing speaking English", "weekly with members", "will help me become", "more confident at work."]
+            },
+            {
+                step: "Câu 3/3: Kết bạn mới",
+                vi: "Tôi cũng hy vọng sẽ kết thêm được nhiều người bạn tốt tại đây.",
+                chunks: ["I also hope", "to make many", "good friends here."]
+            }
+        ]
+    },
+    {
+        id: "p2_book",
+        part: "P2",
+        partLabel: "PART 2 • FORM FILLING (20–30 WORDS)",
+        club: "BOOK CLUB",
+        title: "Part 2 – Book Club: Tell us when and where you like reading books",
+        examPrompt: "Question: Please tell us when and where you usually read books? (Write 20–30 words)",
+        steps: [
+            {
+                step: "Câu 1/2: Thời gian và địa điểm đọc sách",
+                vi: "Tôi thường đọc sách vào mỗi buổi tối trước khi đi ngủ trong phòng ngủ yên tĩnh của mình.",
+                chunks: ["I usually read books", "every evening before", "going to bed in", "my quiet bedroom."]
+            },
+            {
+                step: "Câu 2/2: Cảm nhận và thói quen cuối tuần",
+                vi: "Đôi khi vào cuối tuần, tôi cũng mang tiểu thuyết ra quán cà phê gần nhà đọc để tận hưởng không khí trong lành và thư giãn đầu óc.",
+                chunks: ["Sometimes at weekends,", "I also bring novels", "to a nearby coffee shop", "to relax my mind."]
+            }
+        ]
+    },
+    {
+        id: "p2_photo",
+        part: "P2",
+        partLabel: "PART 2 • FORM FILLING (20–30 WORDS)",
+        club: "PHOTOGRAPHY CLUB",
+        title: "Part 2 – Photography Club: What kind of photos do you like taking?",
+        examPrompt: "Question: Please tell us what kind of photos you like taking and why? (Write 20–30 words)",
+        steps: [
+            {
+                step: "Câu 1/2: Thể loại ảnh yêu thích",
+                vi: "Tôi đặc biệt thích chụp ảnh phong cảnh thiên nhiên và những khoảnh khắc đời thường của gia đình mỗi khi chúng tôi đi du lịch.",
+                chunks: ["I especially love taking", "nature landscape photos", "and daily moments of", "my family when traveling."]
+            },
+            {
+                step: "Câu 2/2: Ý nghĩa của việc chụp ảnh",
+                vi: "Những bức ảnh này giúp tôi lưu giữ những kỷ niệm đẹp đẽ và chia sẻ niềm vui với bạn bè.",
+                chunks: ["These photos help me", "keep beautiful memories", "and share joy", "with my friends."]
+            }
+        ]
+    },
+
+    // =========================================================================
+    // PART 3: TRẢ LỜI 3 CÂU HỎI PHÒNG CHAT (30 - 40 TỪ / CÂU)
+    // =========================================================================
+    {
+        id: "p3_food",
+        part: "P3",
+        partLabel: "PART 3 • CHAT ROOM (30–40 WORDS / QUESTION)",
+        club: "FOOD CLUB",
+        title: "Part 3 – Food Club: Trả lời 3 câu hỏi phòng Chat hoàn chỉnh",
+        examPrompt: "Respond to 3 questions in the Food Club chat room (30–40 words per answer).",
+        steps: [
+            {
+                step: "Chat 1 (Sam): Who did you eat with recently and where did you go? (Câu 1/2)",
+                vi: "Chào Sam, cuối tuần trước mình đã đi ăn tối cùng gia đình tại một nhà hàng hải sản truyền thống ở trung tâm thành phố để tổ chức sinh nhật cho mẹ.",
+                chunks: ["Hi Sam, last weekend", "I had dinner with", "my family at a", "traditional seafood restaurant", "in the city center", "to celebrate my mother's birthday."]
+            },
+            {
+                step: "Chat 1 (Sam): Cảm nhận về bữa ăn đó (Câu 2/2)",
+                vi: "Đồ ăn ở đó thực sự tươi ngon với mức giá hợp lý, và tất cả chúng mình đều có một buổi tối vô cùng ấm cúng.",
+                chunks: ["The food there was", "really fresh with", "a reasonable price,", "and we all had", "a very cozy evening."]
+            },
+            {
+                step: "Chat 2 (Alex): Do you prefer eating out or cooking at home? (Câu 1/2)",
+                vi: "Chào Alex, cá nhân mình thích tự nấu ăn ở nhà hơn là đi ăn ngoài hàng vì mình có thể chọn nguyên liệu tươi sạch.",
+                chunks: ["Hi Alex, personally", "I prefer cooking at home", "to eating out because", "I can choose", "fresh and clean ingredients."]
+            },
+            {
+                step: "Chat 2 (Alex): Lợi ích tiết kiệm & gắn kết (Câu 2/2)",
+                vi: "Hơn nữa, việc nấu ăn tại nhà giúp mình tiết kiệm được khá nhiều tiền và gắn kết các thành viên trong gia đình lại gần nhau hơn.",
+                chunks: ["Moreover, cooking at home", "helps me save", "a lot of money", "and brings family members", "closer together."]
+            },
+            {
+                step: "Chat 3 (Chris): Why are cooking classes becoming popular? (Câu 1/2)",
+                vi: "Chào Chris, mình nghĩ các lớp học nấu ăn ngày càng phổ biến vì ngày nay mọi người quan tâm nhiều hơn đến sức khỏe và chế độ dinh dưỡng.",
+                chunks: ["Hi Chris, I think", "cooking classes are becoming", "popular because nowadays", "people care more about", "health and nutrition."]
+            },
+            {
+                step: "Chat 3 (Chris): Lợi ích giao lưu kết bạn (Câu 2/2)",
+                vi: "Ngoài ra, tham gia các lớp học này cũng là một cách tuyệt vời để giảm căng thẳng và kết bạn với những người có cùng sở thích.",
+                chunks: ["Besides, joining these classes", "is a great way", "to reduce stress and", "make friends with people", "who share the same hobby."]
+            }
+        ]
+    },
+    {
+        id: "p3_english",
+        part: "P3",
+        partLabel: "PART 3 • CHAT ROOM (30–40 WORDS / QUESTION)",
+        club: "ENGLISH CLUB",
+        title: "Part 3 – English Club: Trả lời 3 câu hỏi phòng Chat hoàn chỉnh",
+        examPrompt: "Respond to 3 questions in the English Club chat room (30–40 words per answer).",
+        steps: [
+            {
+                step: "Chat 1 (Sam): How did you learn English in the past? (Câu 1/2)",
+                vi: "Chào Sam, khi còn học phổ thông, mình chủ yếu học ngữ pháp tiếng Anh qua sách giáo khoa và nghe các bài hát tiếng Anh mỗi ngày.",
+                chunks: ["Hi Sam, when I was", "in high school, I mainly", "learned English grammar through", "textbooks and listened to", "English songs every day."]
+            },
+            {
+                step: "Chat 1 (Sam): Kết quả của phương pháp đó (Câu 2/2)",
+                vi: "Nhờ việc xem thêm các bộ phim có phụ đề tiếng Anh, vốn từ vựng và khả năng nghe của mình đã cải thiện rất nhanh chóng.",
+                chunks: ["Thanks to watching movies", "with English subtitles,", "my vocabulary and", "listening skills improved", "very quickly."]
+            },
+            {
+                step: "Chat 2 (Alex): Do you prefer learning English online or in a classroom? (Câu 1/2)",
+                vi: "Chào Alex, mình thích học tiếng Anh trực tuyến hơn vì nó cực kỳ linh hoạt và giúp mình tiết kiệm thời gian đi lại.",
+                chunks: ["Hi Alex, I prefer", "learning English online", "because it is extremely", "flexible and helps me", "save travel time."]
+            },
+            {
+                step: "Chat 2 (Alex): Lý do bổ sung (Câu 2/2)",
+                vi: "Mình có thể dễ dàng trao đổi với giáo viên bản xứ qua máy tính tại nhà và xem lại bài giảng bất cứ khi nào mình rảnh.",
+                chunks: ["I can easily talk", "with native teachers", "on my computer at home", "and review lessons", "whenever I am free."]
+            },
+            {
+                step: "Chat 3 (Chris): Why is English important for young people today? (Câu 1/2)",
+                vi: "Chào Chris, theo mình tiếng Anh đóng vai trò vô cùng quan trọng vì nó mở ra nhiều cơ hội việc làm với mức lương cao tại các công ty quốc tế.",
+                chunks: ["Hi Chris, in my opinion,", "English plays a vital role", "because it opens up", "many high-paying job opportunities", "at international companies."]
+            },
+            {
+                step: "Chat 3 (Chris): Lợi ích khi đi du lịch và học tập (Câu 2/2)",
+                vi: "Hơn nữa, giỏi tiếng Anh giúp người trẻ tự tin đi du lịch nước ngoài và tiếp cận nguồn kiến thức khổng lồ trên Internet.",
+                chunks: ["Moreover, being good at English", "helps young people travel", "abroad confidently and access", "huge knowledge on the internet."]
+            }
+        ]
+    },
+
+    // =========================================================================
+    // PART 4 – B1 INFORMAL EMAIL (ĐẦY ĐỦ 100% 6 CÂU TRONG ĐOẠN EMAIL)
+    // =========================================================================
+    {
+        id: "p4_food_inf",
+        part: "P4_INF",
+        partLabel: "PART 4 • INFORMAL EMAIL",
+        club: "FOOD CLUB",
+        title: "1A. Food Club – B1 Informal Email (Đầy đủ 6 câu hoàn chỉnh)",
+        examPrompt: "Task 1: Write an email to your friend (about 50 words). Tell your friend how you feel about the club's plan to invite a chef and suggest what food and topic the chef should present.",
+        steps: [
+            {
+                step: "Bước 1: Chào bạn & hỏi thăm sức khỏe",
+                vi: "Chào Linh, dạo này mọi thứ thế nào? Mình hy vọng bạn vẫn khỏe.",
+                chunks: ["Hi Linh,", "how are things?", "I hope", "you are doing well."]
+            },
+            {
+                step: "Bước 2: Nhắc lại thông báo của Câu lạc bộ Ẩm thực",
+                vi: "Bạn đã nghe thông báo về việc câu lạc bộ ẩm thực đang lên kế hoạch mời một đầu bếp nổi tiếng vào tháng tới chưa?",
+                chunks: ["Have you heard", "that the food club", "is planning to invite", "a famous chef", "next month?"]
+            },
+            {
+                step: "Bước 3: Bày tỏ cảm xúc cá nhân",
+                vi: "Thực lòng mà nói, mình cảm thấy vô cùng hào hứng vì mình có thể học được nhiều công thức nấu ăn mới.",
+                chunks: ["Honestly,", "I feel extremely excited", "because I can learn", "many new cooking recipes."]
+            },
+            {
+                step: "Bước 4: Đề xuất món ăn & chủ đề (Câu trọng tâm trong ảnh)",
+                vi: "Theo mình, đầu bếp nên thảo luận về các bữa ăn lành mạnh vì chủ đề này hữu ích. Ngoài ra, họ có thể làm món gỏi cuốn.",
+                chunks: ["In my opinion,", "the chef should discuss", "healthy meals", "because this topic is useful.", "Besides, they could prepare", "Vietnamese spring rolls."]
+            },
+            {
+                step: "Bước 5: Đề xuất thời gian & ưu đãi thu hút người trẻ",
+                vi: "Hơn nữa, việc tổ chức sự kiện vào chiều Chủ nhật và giảm giá vé sẽ thu hút nhiều thành viên trẻ tuổi hơn.",
+                chunks: ["Moreover,", "holding the event", "on Sunday afternoon", "and offering a ticket discount", "will attract more young members."]
+            },
+            {
+                step: "Bước 6: Kết thư & Ký tên thân mật",
+                vi: "Hãy cho mình biết suy nghĩ của bạn về điều này nhé. Thân mến, Minh.",
+                chunks: ["Let me know", "what you think", "about this.", "Love, Minh."]
+            }
+        ]
+    },
+    {
+        id: "p4_english_inf",
+        part: "P4_INF",
+        partLabel: "PART 4 • INFORMAL EMAIL",
+        club: "ENGLISH CLUB",
+        title: "2A. English Club – B1 Informal Email (Đầy đủ 6 câu hoàn chỉnh)",
+        examPrompt: "Task 1: Write an email to your friend (about 50 words). Share your feelings about the upcoming English club event and suggest a topic and activity.",
+        steps: [
+            {
+                step: "Bước 1: Chào bạn & mở đầu thư",
+                vi: "Chào Lan, dạo này mọi việc thế nào? Mình hy vọng mọi thứ với bạn đều ổn.",
+                chunks: ["Hi Lan,", "how is it going?", "I hope everything", "is great with you."]
+            },
+            {
+                step: "Bước 2: Nhắc lại thông báo của CLB Tiếng Anh",
+                vi: "Bạn đã nhận được email từ câu lạc bộ tiếng Anh về việc tổ chức một sự kiện giao lưu quốc tế chưa?",
+                chunks: ["Have you received", "the email from", "the English club about", "organizing an international event?"]
+            },
+            {
+                step: "Bước 3: Bày tỏ cảm xúc hào hứng",
+                vi: "Mình cảm thấy rất vui vì đây là cơ hội tuyệt vời để luyện kỹ năng nói tiếng Anh với người bản xứ.",
+                chunks: ["I feel really happy", "because this is", "a great chance to practice", "speaking skills with native speakers."]
+            },
+            {
+                step: "Bước 4: Đề xuất chủ đề & hoạt động",
+                vi: "Theo mình, câu lạc bộ nên chọn chủ đề du lịch và tổ chức các trò chơi đố vui theo nhóm để không khí sôi động hơn.",
+                chunks: ["In my opinion,", "the club should choose", "the travel topic", "and organize group quiz games", "to make the atmosphere lively."]
+            },
+            {
+                step: "Bước 5: Đề xuất thời gian tổ chức",
+                vi: "Ngoài ra, việc tổ chức vào tối thứ Bảy sẽ giúp mọi người dễ dàng tham gia hơn.",
+                chunks: ["Besides,", "holding it on", "Saturday evening", "will help everyone", "join more easily."]
+            },
+            {
+                step: "Bước 6: Kết thư thân mật",
+                vi: "Viết lại cho mình sớm nhé. Thân ái, Minh.",
+                chunks: ["Write back to me", "soon.", "Best wishes,", "Minh."]
+            }
+        ]
+    },
+    {
+        id: "p4_book_inf",
+        part: "P4_INF",
+        partLabel: "PART 4 • INFORMAL EMAIL",
+        club: "BOOK CLUB",
+        title: "3A. Book Club – B1 Informal Email (Đầy đủ 6 câu hoàn chỉnh)",
+        examPrompt: "Task 1: Write an email to your friend (about 50 words). Tell your friend how you feel about the new online library plan and suggest what books to add.",
+        steps: [
+            {
+                step: "Bước 1: Chào bạn & hỏi thăm",
+                vi: "Chào Nam, tuần này của bạn thế nào? Mình hy vọng bạn vẫn khỏe.",
+                chunks: ["Hi Nam,", "how is your week?", "I hope you", "are doing well."]
+            },
+            {
+                step: "Bước 2: Thông báo sự kiện của CLB Sách",
+                vi: "Bạn đã nghe tin câu lạc bộ đọc sách sắp xây dựng một thư viện trực tuyến mới cho các thành viên chưa?",
+                chunks: ["Have you heard that", "the book club is going", "to build a new", "online library for members?"]
+            },
+            {
+                step: "Bước 3: Bày tỏ cảm xúc",
+                vi: "Mình cảm thấy rất phấn khởi vì mình có thể đọc sách điện tử mọi lúc mọi nơi trên điện thoại.",
+                chunks: ["I feel very excited", "because I can read", "e-books anytime and anywhere", "on my phone."]
+            },
+            {
+                step: "Bước 4: Đề xuất thể loại sách & tính năng",
+                vi: "Theo mình, câu lạc bộ nên bổ sung nhiều tiểu thuyết tiếng Anh và sách kỹ năng sống vì chúng rất bổ ích.",
+                chunks: ["In my opinion,", "the club should add", "more English novels", "and life-skill books", "because they are very useful."]
+            },
+            {
+                step: "Bước 5: Đề xuất buổi thảo luận hàng tháng",
+                vi: "Ngoài ra, chúng ta có thể tổ chức một buổi đánh giá sách trực tuyến mỗi tháng để chia sẻ cảm nhận.",
+                chunks: ["Besides, we could hold", "an online book review", "session every month", "to share our thoughts."]
+            },
+            {
+                step: "Bước 6: Kết thư thân mật",
+                vi: "Hãy cho mình biết ý kiến của bạn sớm nhé. Thân mến, Minh.",
+                chunks: ["Let me know", "your opinion soon.", "Best regards,", "Minh."]
+            }
+        ]
+    },
+    {
+        id: "p4_photo_inf",
+        part: "P4_INF",
+        partLabel: "PART 4 • INFORMAL EMAIL",
+        club: "PHOTOGRAPHY CLUB",
+        title: "4A. Photography Club – B1 Informal Email (Đầy đủ 6 câu hoàn chỉnh)",
+        examPrompt: "Task 1: Write an email to your friend (about 50 words). Tell your friend how you feel about the photo contest and suggest a theme and prize.",
+        steps: [
+            {
+                step: "Bước 1: Chào bạn & hỏi thăm",
+                vi: "Chào Mai, dạo này mọi thứ thế nào? Mình hy vọng bạn có một tuần tuyệt vời.",
+                chunks: ["Hi Mai,", "how are things?", "I hope you are having", "a wonderful week."]
+            },
+            {
+                step: "Bước 2: Thông báo cuộc thi của CLB Nhiếp ảnh",
+                vi: "Bạn đã nghe tin câu lạc bộ nhiếp ảnh sắp tổ chức một cuộc thi ảnh thường niên vào tháng sau chưa?",
+                chunks: ["Have you heard that", "the photography club", "is going to hold", "an annual photo contest", "next month?"]
+            },
+            {
+                step: "Bước 3: Bày tỏ cảm xúc",
+                vi: "Thực sự mình cảm thấy vô cùng hào hứng vì mình rất thích chụp ảnh phong cảnh thiên nhiên.",
+                chunks: ["Honestly,", "I feel extremely excited", "because I really love", "taking nature landscape photos."]
+            },
+            {
+                step: "Bước 4: Đề xuất chủ đề & cách trưng bày",
+                vi: "Theo mình, cuộc thi nên tập trung vào chủ đề cuộc sống thường ngày và trưng bày các bức ảnh đẹp nhất tại công viên trung tâm.",
+                chunks: ["In my opinion,", "the contest should focus on", "daily life", "and display the best photos", "in the central park."]
+            },
+            {
+                step: "Bước 5: Đề xuất giải thưởng",
+                vi: "Ngoài ra, họ có thể tặng một khóa học nhiếp ảnh miễn phí cho người chiến thắng.",
+                chunks: ["Besides,", "they could offer", "a free photography course", "for the winner."]
+            },
+            {
+                step: "Bước 6: Kết thư thân mật",
+                vi: "Hãy nói cho mình biết suy nghĩ của bạn nhé. Thân mến, Minh.",
+                chunks: ["Tell me what", "you think about this.", "Love, Minh."]
+            }
+        ]
+    },
+
+    // =========================================================================
+    // PART 4 – B1 FORMAL EMAIL (ĐẦY ĐỦ 100% 6 CÂU TRONG ĐOẠN EMAIL)
+    // =========================================================================
+    {
+        id: "p4_food_for",
+        part: "P4_FOR",
+        partLabel: "PART 4 • FORMAL EMAIL",
+        club: "FOOD CLUB",
+        title: "1B. Food Club – B1 Formal Email (Đầy đủ 6 câu hoàn chỉnh)",
+        examPrompt: "Task 2: Write an email to the club manager (120–150 words). Express your feelings about inviting the chef and suggest the cooking topic, dish, and ways to attract young members.",
+        steps: [
+            {
+                step: "Bước 1: Lời chào trang trọng & giới thiệu bản thân",
+                vi: "Kính gửi Ban quản lý, tôi viết thư này với tư cách là một thành viên tích cực của câu lạc bộ ẩm thực trong hai năm qua.",
+                chunks: ["Dear Sir or Madam,", "I am writing this email", "as an active member of", "the food club for", "the last two years."]
+            },
+            {
+                step: "Bước 2: Nêu lý do viết thư & cảm xúc",
+                vi: "Tôi vô cùng hào hứng khi biết tin câu lạc bộ đang lên kế hoạch mời một đầu bếp chuyên nghiệp tới hướng dẫn các thành viên vào tháng tới.",
+                chunks: ["I am delighted to hear", "that the club is planning", "to invite a professional chef", "to guide the members", "next month."]
+            },
+            {
+                step: "Bước 3: Đề xuất chủ đề thảo luận & món ăn",
+                vi: "Theo quan điểm của tôi, đầu bếp nên thảo luận về các bữa ăn lành mạnh vì chủ đề này rất hữu ích. Ngoài ra, họ có thể chuẩn bị món gỏi cuốn truyền thống của Việt Nam.",
+                chunks: ["In my opinion,", "the chef should discuss", "healthy meals", "because this topic is useful.", "Besides, they could prepare", "traditional Vietnamese spring rolls."]
+            },
+            {
+                step: "Bước 4: Đề xuất cách thu hút thành viên trẻ tuổi",
+                vi: "Để thu hút thêm nhiều thành viên trẻ tuổi, câu lạc bộ nên tổ chức sự kiện vào chiều Chủ nhật và tặng phiếu giảm giá vé cho học sinh, sinh viên.",
+                chunks: ["To attract more young members,", "the club should hold", "the event on Sunday afternoon", "and offer ticket discounts", "for students."]
+            },
+            {
+                step: "Bước 5: Mong nhận phản hồi từ Ban quản lý",
+                vi: "Tôi hy vọng những đóng góp của tôi sẽ được xem xét và rất mong sớm nhận được phản hồi từ quý vị.",
+                chunks: ["I hope my suggestions", "will be considered", "and I look forward to", "hearing from you soon."]
+            },
+            {
+                step: "Bước 6: Ký tên trang trọng",
+                vi: "Trân trọng, Nguyễn Minh.",
+                chunks: ["Yours faithfully,", "Nguyen Minh."]
+            }
+        ]
+    },
+    {
+        id: "p4_english_for",
+        part: "P4_FOR",
+        partLabel: "PART 4 • FORMAL EMAIL",
+        club: "ENGLISH CLUB",
+        title: "2B. English Club – B1 Formal Email (Đầy đủ 6 câu hoàn chỉnh)",
+        examPrompt: "Task 2: Write an email to the club manager (120–150 words). Give your opinion about the international exchange event and suggest topics, activities, and time.",
+        steps: [
+            {
+                step: "Bước 1: Lời chào & giới thiệu mục đích viết thư",
+                vi: "Kính gửi Ban tổ chức, tôi viết thư này liên quan đến thông báo gần đây về sự kiện giao lưu sắp tới của câu lạc bộ tiếng Anh.",
+                chunks: ["Dear Sir or Madam,", "I am writing this email", "regarding the recent notice", "about the upcoming event", "of the English club."]
+            },
+            {
+                step: "Bước 2: Bày tỏ cảm xúc tích cực",
+                vi: "Tôi rất hào hứng với kế hoạch này vì nó giúp tất cả các thành viên cải thiện sự tự tin khi giao tiếp với người nước ngoài.",
+                chunks: ["I am very excited about", "this plan because", "it helps all members", "improve their confidence", "when communicating with foreigners."]
+            },
+            {
+                step: "Bước 3: Đề xuất chủ đề & hình thức hoạt động",
+                vi: "Theo ý kiến của tôi, câu lạc bộ nên thảo luận về văn hóa thế giới vì chủ đề này rất thú vị. Ngoài ra, chúng ta có thể tổ chức các trò chơi đố vui theo nhóm.",
+                chunks: ["In my opinion,", "the club should discuss", "world cultures", "because this topic is interesting.", "Besides, we could organize", "group quiz games."]
+            },
+            {
+                step: "Bước 4: Đề xuất địa điểm & thời gian",
+                vi: "Hơn nữa, tôi đề xuất tổ chức buổi gặp mặt tại hội trường chính vào tối thứ Bảy để cả người đi làm lẫn sinh viên đều có thể tham dự.",
+                chunks: ["Furthermore, I suggest", "holding the meeting", "in the main hall", "on Saturday evening", "so everyone can attend."]
+            },
+            {
+                step: "Bước 5: Cảm ơn & mong phản hồi",
+                vi: "Cảm ơn quý vị đã xem xét ý kiến của tôi và tôi mong sớm nhận được phản hồi từ quý vị.",
+                chunks: ["Thank you for considering", "my suggestions and", "I look forward to", "hearing from you soon."]
+            },
+            {
+                step: "Bước 6: Ký tên trang trọng",
+                vi: "Trân trọng, Nguyễn Minh.",
+                chunks: ["Yours faithfully,", "Nguyen Minh."]
+            }
+        ]
+    },
+    {
+        id: "p4_book_for",
+        part: "P4_FOR",
+        partLabel: "PART 4 • FORMAL EMAIL",
+        club: "BOOK CLUB",
+        title: "3B. Book Club – B1 Formal Email (Đầy đủ 6 câu hoàn chỉnh)",
+        examPrompt: "Task 2: Write an email to the club manager (120–150 words). State your feelings about the new online library and suggest book categories and monthly activities.",
+        steps: [
+            {
+                step: "Bước 1: Lời chào & giới thiệu",
+                vi: "Kính gửi Ban quản lý, tôi viết thư này để đóng góp một số ý kiến cho dự án thư viện trực tuyến mới của câu lạc bộ đọc sách.",
+                chunks: ["Dear Manager,", "I am writing this email", "to give some suggestions", "for the new online library", "project of the book club."]
+            },
+            {
+                step: "Bước 2: Bày tỏ sự ủng hộ",
+                vi: "Tôi hoàn toàn ủng hộ ý tưởng này vì nó giúp các thành viên tiết kiệm thời gian và duy trì thói quen đọc sách hàng ngày.",
+                chunks: ["I totally support", "this idea because", "it helps members save time", "and maintain daily", "reading habits."]
+            },
+            {
+                step: "Bước 3: Đề xuất nội dung sách",
+                vi: "Theo quan điểm của tôi, câu lạc bộ nên bổ sung nhiều tiểu thuyết tiếng Anh và sách kỹ năng sống để phục vụ nhiều lứa tuổi khác nhau.",
+                chunks: ["In my opinion,", "the club should add", "more English novels", "and life-skill books", "to serve different age groups."]
+            },
+            {
+                step: "Bước 4: Đề xuất mời tác giả & thảo luận hàng tháng",
+                vi: "Ngoài ra, câu lạc bộ có thể tổ chức một buổi đánh giá sách trực tuyến mỗi tháng và mời một nhà văn nổi tiếng đến chia sẻ kinh nghiệm.",
+                chunks: ["In addition, the club could", "hold an online book review", "session every month and", "invite a famous writer", "to share experiences."]
+            },
+            {
+                step: "Bước 5: Mong nhận phản hồi",
+                vi: "Tôi hy vọng đề xuất của tôi sẽ hữu ích và rất mong sớm nhận được phản hồi từ quý vị.",
+                chunks: ["I hope my suggestions", "will be useful", "and I look forward to", "hearing from you soon."]
+            },
+            {
+                step: "Bước 6: Ký tên trang trọng",
+                vi: "Trân trọng, Nguyễn Minh.",
+                chunks: ["Yours sincerely,", "Nguyen Minh."]
+            }
+        ]
+    },
+    {
+        id: "p4_photo_for",
+        part: "P4_FOR",
+        partLabel: "PART 4 • FORMAL EMAIL",
+        club: "PHOTOGRAPHY CLUB",
+        title: "4B. Photography Club – B1 Formal Email (Đầy đủ 6 câu hoàn chỉnh)",
+        examPrompt: "Task 2: Write an email to the club manager (120–150 words). Share your thoughts on the annual photo contest and suggest a theme, exhibition place, and prize.",
+        steps: [
+            {
+                step: "Bước 1: Lời chào & nêu lý do viết thư",
+                vi: "Kính gửi Ban tổ chức, tôi viết thư này để đóng góp một số ý tưởng cho cuộc thi ảnh thường niên sắp tới của câu lạc bộ nhiếp ảnh.",
+                chunks: ["Dear Sir or Madam,", "I am writing this email", "to suggest some ideas", "for the upcoming annual", "photo contest of the club."]
+            },
+            {
+                step: "Bước 2: Bày tỏ cảm xúc",
+                vi: "Tôi cảm thấy vô cùng hào hứng khi câu lạc bộ tổ chức sự kiện này để kết nối những người có niềm đam mê nhiếp ảnh.",
+                chunks: ["I feel extremely excited", "that the club is organizing", "this event to connect", "people who love photography."]
+            },
+            {
+                step: "Bước 3: Đề xuất chủ đề cuộc thi & nơi trưng bày",
+                vi: "Theo quan điểm của tôi, cuộc thi nên tập trung vào chủ đề cuộc sống thường ngày và trưng bày các bức ảnh đẹp nhất tại công viên trung tâm.",
+                chunks: ["In my opinion,", "the contest should focus on", "daily life", "and display the best photos", "in the central park."]
+            },
+            {
+                step: "Bước 4: Đề xuất giải thưởng & bình chọn trực tuyến",
+                vi: "Ngoài ra, câu lạc bộ nên đăng tải các tác phẩm lên trang web để công chúng bình chọn và tặng một khóa học nhiếp ảnh miễn phí cho người chiến thắng.",
+                chunks: ["Furthermore, the club should", "upload photos to the website", "for public voting and", "offer a free course", "for the winner."]
+            },
+            {
+                step: "Bước 5: Mong nhận phản hồi",
+                vi: "Tôi hy vọng những đề xuất này sẽ hữu ích và mong sớm nhận được thư trả lời của quý vị.",
+                chunks: ["I hope these suggestions", "will be helpful", "and I look forward to", "your reply soon."]
+            },
+            {
+                step: "Bước 6: Ký tên trang trọng",
+                vi: "Trân trọng, Nguyễn Minh.",
+                chunks: ["Yours faithfully,", "Nguyen Minh."]
+            }
+        ]
+    }
+];
+
+// TRẠNG THÁI ỨNG DỤNG
+let allDecks = JSON.parse(localStorage.getItem('aptis_w_master_decks_v1')) || DEFAULT_WRITING_DATA;
+let bookmarkedKeys = JSON.parse(localStorage.getItem('aptis_w_master_bookmarks') || '{}');
+let completedKeys = JSON.parse(localStorage.getItem('aptis_w_master_completed') || '{}');
+
+let currentPart = 'P4_INF'; // 'P1', 'P2', 'P3', 'P4_INF', 'P4_FOR'
+let practiceMode = 'chunk'; // 'chunk' hoặc 'type'
+let isSavedFilterActive = false;
+let currentDeckIndex = 6; // Mặc định mở ngay bài Food Club - Part 4 Informal Email
+let currentStepIndex = 3; // Mặc định hiển thị câu 4 (In my opinion, the chef should discuss...) hoặc câu 1
+let selectedChunks = [];
+let availableChunks = [];
+let isShowingSolution = false;
+let maskFullEmail = false;
+
+function countWords(str) {
+    const cleaned = str.trim();
+    if (!cleaned) return 0;
+    return cleaned.split(/\s+/).length;
+}
+
+function saveStorage() {
+    localStorage.setItem('aptis_w_master_decks_v1', JSON.stringify(allDecks));
+    localStorage.setItem('aptis_w_master_bookmarks', JSON.stringify(bookmarkedKeys));
+    localStorage.setItem('aptis_w_master_completed', JSON.stringify(completedKeys));
+    updateSavedCounter();
+}
+
+function updateSavedCounter() {
+    const count = Object.values(bookmarkedKeys).filter(Boolean).length;
+    document.getElementById('savedCount').textContent = count;
+}
+
+function getDecksByCurrentPart() {
+    return allDecks.filter(d => d.part === currentPart);
+}
+
+function initDeckDropdown() {
+    const select = document.getElementById('deckSelect');
+    const decks = getDecksByCurrentPart();
+    select.innerHTML = '';
+    decks.forEach(d => {
+        const realIdx = allDecks.findIndex(item => item.id === d.id);
+        const opt = document.createElement('option');
+        opt.value = realIdx;
+        opt.textContent = `📌 ${d.title}`;
+        if (realIdx === currentDeckIndex) opt.selected = true;
+        select.appendChild(opt);
+    });
+}
+
+function shuffleArray(arr) {
+    const copy = [...arr];
+    for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+    }
+    if (copy.length > 1 && copy.every((val, idx) => val.text === arr[idx].text)) {
+        [copy[0], copy[1]] = [copy[1], copy[0]];
+    }
+    return copy;
+}
+
+function getCurrentStepKey() {
+    const deck = allDecks[currentDeckIndex];
+    return `${deck.id}_S${currentStepIndex}`;
+}
+
+function selectPart(partCode) {
+    isSavedFilterActive = false;
+    document.getElementById('savedFilterBtn').classList.remove('active');
+    currentPart = partCode;
+
+    document.querySelectorAll('.part-tab').forEach(b => b.classList.remove('active'));
+    document.getElementById(`ptab-${partCode}`).classList.add('active');
+
+    const matchingDecks = getDecksByCurrentPart();
+    if (matchingDecks.length > 0) {
+        const firstRealIdx = allDecks.findIndex(d => d.id === matchingDecks[0].id);
+        loadStep(firstRealIdx, 0);
+    }
+}
+
+function setPracticeMode(mode) {
+    practiceMode = mode;
+    document.getElementById('modeChunkBtn').classList.toggle('active', mode === 'chunk');
+    document.getElementById('modeTypeBtn').classList.toggle('active', mode === 'type');
+    document.getElementById('chunkModeArea').style.display = mode === 'chunk' ? 'block' : 'none';
+    document.getElementById('typeModeArea').classList.toggle('show', mode === 'type');
+    renderUI();
+}
+
+function loadStep(deckIdx, stepIdx) {
+    currentDeckIndex = deckIdx;
+    currentStepIndex = stepIdx;
+    isShowingSolution = false;
+
+    const deck = allDecks[currentDeckIndex];
+    currentPart = deck.part;
+    document.querySelectorAll('.part-tab').forEach(b => b.classList.remove('active'));
+    const tabEl = document.getElementById(`ptab-${currentPart}`);
+    if (tabEl) tabEl.classList.add('active');
+
+    const stepObj = deck.steps[currentStepIndex];
+    selectedChunks = [];
+    const indexedChunks = stepObj.chunks.map((text, idx) => ({ id: idx, text }));
+    availableChunks = shuffleArray(indexedChunks);
+
+    const typingInput = document.getElementById('typingInput');
+    if (typingInput) {
+        typingInput.value = '';
+        document.getElementById('typingLiveWords').textContent = 'Số từ đã gõ: 0 từ';
+        document.getElementById('typingStatusText').textContent = '';
+    }
+
+    initDeckDropdown();
+    renderUI();
+}
+
+function renderUI() {
+    const deck = allDecks[currentDeckIndex];
+    const stepObj = deck.steps[currentStepIndex];
+    const totalSteps = deck.steps.length;
+    const targetSentence = stepObj.chunks.join(' ');
+
+    // 1. Progress bar
+    const progressPercent = ((currentStepIndex + 1) / totalSteps) * 100;
+    document.getElementById('progressBar').style.width = `${progressPercent}%`;
+
+    // 2. Badges & Counter
+    const badgePart = document.getElementById('badgePart');
+    badgePart.textContent = deck.partLabel;
+    badgePart.className = `pill ${deck.part === 'P4_FOR' ? 'pill-formal' : 'pill-part'}`;
+
+    document.getElementById('badgeClub').textContent = deck.club;
+    document.getElementById('stepCounter').textContent = `Câu ${currentStepIndex + 1}/${totalSteps}`;
+    document.getElementById('examPromptBox').innerHTML = `<strong>📋 Đề bài (Exam Task):</strong> ${deck.examPrompt}`;
+    document.getElementById('stepTitle').textContent = `📌 ${stepObj.step}`;
+    document.getElementById('stepWordCount').textContent = `Độ dài câu chuẩn: ${countWords(targetSentence)} từ`;
+    document.getElementById('viPrompt').textContent = stepObj.vi;
+
+    // 3. Answer Zone (Chunking mode)
+    const zoneEl = document.getElementById('answerZone');
+    zoneEl.className = 'answer-zone';
+    const currentSentence = selectedChunks.map(c => c.text).join(' ');
+
+    if (selectedChunks.length === 0) {
+        zoneEl.innerHTML = `<span class="zone-placeholder">Chạm các mảnh ghép bên dưới để xếp vào đây...</span>`;
+    } else {
+        zoneEl.innerHTML = selectedChunks.map((c, sIdx) => `
+            <button class="chunk-btn in-zone" onclick="removeChunkFromZone(${sIdx})">${c.text}</button>
+        `).join('');
+
+        if (selectedChunks.length === stepObj.chunks.length) {
+            if (currentSentence === targetSentence) {
+                zoneEl.classList.add('correct-zone');
+                completedKeys[getCurrentStepKey()] = true;
+                saveStorage();
+            } else {
+                zoneEl.classList.add('wrong-zone');
+            }
+        }
+    }
+
+    // 4. Chunks Pool
+    const poolEl = document.getElementById('chunksPool');
+    poolEl.innerHTML = availableChunks.map((c, pIdx) => `
+        <button class="chunk-btn" onclick="pickChunkFromPool(${pIdx})">${c.text}</button>
+    `).join('');
+
+    // 5. Solution Banner
+    const solBanner = document.getElementById('solutionBanner');
+    if (isShowingSolution) {
+        solBanner.classList.add('show');
+        solBanner.innerHTML = `💡 <strong>Đáp án chuẩn (${countWords(targetSentence)} từ):</strong> ${targetSentence}`;
+    } else {
+        solBanner.classList.remove('show');
+    }
+
+    // 6. Bookmark button
+    const bmBtn = document.getElementById('bookmarkBtn');
+    const isSaved = !!bookmarkedKeys[getCurrentStepKey()];
+    bmBtn.classList.toggle('bookmarked', isSaved);
+    bmBtn.innerHTML = isSaved ? `★ Đã đánh dấu` : `☆ Đánh dấu`;
+
+    // 7. Full Overview Card
+    renderFullOverview();
+}
+
+function pickChunkFromPool(poolIdx) {
+    const chunk = availableChunks.splice(poolIdx, 1)[0];
+    selectedChunks.push(chunk);
+    renderUI();
+
+    const deck = allDecks[currentDeckIndex];
+    const stepObj = deck.steps[currentStepIndex];
+    if (selectedChunks.length === stepObj.chunks.length) {
+        const target = stepObj.chunks.join(' ');
+        const current = selectedChunks.map(c => c.text).join(' ');
+        if (current === target) {
+            speakText(target);
+        }
+    }
+}
+
+function removeChunkFromZone(zoneIdx) {
+    const chunk = selectedChunks.splice(zoneIdx, 1)[0];
+    availableChunks.push(chunk);
+    renderUI();
+}
+
+// XỬ LÝ GÕ PHÍM (TYPING MODE)
+function handleTypingInput() {
+    const val = document.getElementById('typingInput').value;
+    document.getElementById('typingLiveWords').textContent = `Số từ đã gõ: ${countWords(val)} từ`;
+}
+
+function checkTypedAnswer() {
+    const val = document.getElementById('typingInput').value.trim().replace(/\s+/g, ' ');
+    const stepObj = allDecks[currentDeckIndex].steps[currentStepIndex];
+    const target = stepObj.chunks.join(' ').trim();
+    const statusEl = document.getElementById('typingStatusText');
+
+    if (val.toLowerCase() === target.toLowerCase()) {
+        statusEl.innerHTML = `<span style="color:var(--success)">✅ Chính xác 100%!</span>`;
+        completedKeys[getCurrentStepKey()] = true;
+        saveStorage();
+        speakText(target);
+        renderFullOverview();
+    } else {
+        statusEl.innerHTML = `<span style="color:var(--danger)">❌ Chưa khớp hoàn toàn. Hãy bấm "💡 Đáp án" để đối chiếu!</span>`;
+    }
+}
+
+function renderFullOverview() {
+    const deck = allDecks[currentDeckIndex];
+    document.getElementById('fullEmailHeaderTitle').textContent = `📄 Toàn bộ ${deck.title} (Bấm vào câu bất kỳ để luyện câu đó)`;
+
+    let totalWords = 0;
+    const listEl = document.getElementById('fullEmailList');
+    listEl.innerHTML = deck.steps.map((st, idx) => {
+        const key = `${deck.id}_S${idx}`;
+        const isDone = !!completedKeys[key];
+        const isCurrent = idx === currentStepIndex;
+        const fullEn = st.chunks.join(' ');
+        const wCount = countWords(fullEn);
+        totalWords += wCount;
+
+        return `
+            <div class="email-sentence-item ${isCurrent ? 'current-sen' : ''} ${isDone ? 'done-sen' : ''}"
+                 onclick="loadStep(${currentDeckIndex}, ${idx})">
+                <span class="sen-step-tag">${isDone ? '✅' : '⬜'} Câu ${idx + 1}/${deck.steps.length} • ${st.step} (${wCount} từ)</span>
+                <div class="sen-en">${maskFullEmail ? '••••••••••••••••••••••••••••••••••••••••••••' : fullEn}</div>
+                <div class="sen-vi">${st.vi}</div>
+            </div>
+        `;
+    }).join('');
+
+    const doneCount = deck.steps.filter((_, idx) => completedKeys[`${deck.id}_S${idx}`]).length;
+    document.getElementById('totalWordCountBar').innerHTML = `
+        <span>📊 Tiến độ thuộc bài này: <strong>${doneCount}/${deck.steps.length} câu</strong></span>
+        <span>📝 Tổng số từ toàn bài: <strong>${totalWords} words</strong> (Chuẩn yêu cầu Aptis)</span>
+    `;
+}
+
+function toggleMaskFullEmail() {
+    maskFullEmail = !maskFullEmail;
+    document.getElementById('maskBtn').textContent = maskFullEmail ? '👁 Hiện chữ Tiếng Anh' : '🙈 Ẩn chữ Tiếng Anh';
+    renderFullOverview();
+}
+
+function speakText(text) {
+    if (!('speechSynthesis' in window)) return;
+    window.speechSynthesis.cancel();
+    const utter = new SpeechSynthesisUtterance(text);
+    utter.lang = 'en-GB';
+    utter.rate = 0.95;
+    window.speechSynthesis.speak(utter);
+}
+
+function speakCurrentSentence() {
+    const stepObj = allDecks[currentDeckIndex].steps[currentStepIndex];
+    speakText(stepObj.chunks.join(' '));
+}
+
+function speakEntireDeck() {
+    const deck = allDecks[currentDeckIndex];
+    const fullParagraph = deck.steps.map(s => s.chunks.join(' ')).join(' ');
+    speakText(fullParagraph);
+}
+
+function copyEntireDeck() {
+    const deck = allDecks[currentDeckIndex];
+    const fullText = deck.steps.map(s => s.chunks.join(' ')).join('\n');
+    navigator.clipboard.writeText(fullText).then(() => {
+        alert("Đã copy toàn bộ bài viết mẫu tiếng Anh vào bộ nhớ tạm!");
+    });
+}
+
+function toggleShowAnswer() {
+    isShowingSolution = !isShowingSolution;
+    if (isShowingSolution && practiceMode === 'chunk') {
+        const stepObj = allDecks[currentDeckIndex].steps[currentStepIndex];
+        selectedChunks = stepObj.chunks.map((text, idx) => ({ id: idx, text }));
+        availableChunks = [];
+    }
+    renderUI();
+}
+
+function toggleBookmark() {
+    const key = getCurrentStepKey();
+    if (bookmarkedKeys[key]) {
+        delete bookmarkedKeys[key];
+    } else {
+        bookmarkedKeys[key] = true;
+    }
+    saveStorage();
+    renderUI();
+}
+
+function toggleSavedFilter() {
+    const keys = Object.keys(bookmarkedKeys).filter(k => bookmarkedKeys[k]);
+    if (keys.length === 0) {
+        alert("Bạn chưa đánh dấu (☆) câu nào!");
+        return;
+    }
+    const [deckId, stepPart] = keys[0].split('_S');
+    const dIdx = allDecks.findIndex(d => d.id === deckId);
+    if (dIdx !== -1) {
+        loadStep(dIdx, parseInt(stepPart));
+    }
+}
+
+function prevStep() {
+    if (currentStepIndex > 0) {
+        loadStep(currentDeckIndex, currentStepIndex - 1);
+    } else {
+        const partDecks = getDecksByCurrentPart();
+        const currInPart = partDecks.findIndex(d => d.id === allDecks[currentDeckIndex].id);
+        const prevInPart = (currInPart - 1 + partDecks.length) % partDecks.length;
+        const realPrevIdx = allDecks.findIndex(d => d.id === partDecks[prevInPart].id);
+        loadStep(realPrevIdx, allDecks[realPrevIdx].steps.length - 1);
+    }
+}
+
+function nextStep() {
+    const deck = allDecks[currentDeckIndex];
+    if (currentStepIndex < deck.steps.length - 1) {
+        loadStep(currentDeckIndex, currentStepIndex + 1);
+    } else {
+        const partDecks = getDecksByCurrentPart();
+        const currInPart = partDecks.findIndex(d => d.id === deck.id);
+        const nextInPart = (currInPart + 1) % partDecks.length;
+        const realNextIdx = allDecks.findIndex(d => d.id === partDecks[nextInPart].id);
+        loadStep(realNextIdx, 0);
+    }
+}
+
+function changeDeck(realDeckIdx) {
+    loadStep(parseInt(realDeckIdx), 0);
+}
+
+function resetCurrentDeck() {
+    const deck = allDecks[currentDeckIndex];
+    deck.steps.forEach((_, idx) => {
+        delete completedKeys[`${deck.id}_S${idx}`];
+    });
+    saveStorage();
+    loadStep(currentDeckIndex, 0);
+}
+
+// CHỨC NĂNG SỬA / THÊM BÀI MẪU CỦA RIÊNG BẠN
+function openCustomModal() {
+    const deck = allDecks[currentDeckIndex];
+    document.getElementById('customClubInput').value = deck.club;
+    document.getElementById('customPromptInput').value = deck.examPrompt;
+    const formattedLines = deck.steps.map(s => `${s.step} | ${s.vi} | ${s.chunks.join(' / ')}`).join('\n');
+    document.getElementById('customLinesInput').value = formattedLines;
+    document.getElementById('customModal').classList.add('show');
+}
+
+function closeCustomModal() {
+    document.getElementById('customModal').classList.remove('show');
+}
+
+function saveCustomDeck() {
+    const club = document.getElementById('customClubInput').value.trim().toUpperCase() || "CUSTOM CLUB";
+    const prompt = document.getElementById('customPromptInput').value.trim() || "Write your response according to the club's requirement.";
+    const rawLines = document.getElementById('customLinesInput').value.trim().split('\n').filter(l => l.trim());
+
+    const parsedSteps = [];
+    rawLines.forEach((line, idx) => {
+        const parts = line.split('|').map(p => p.trim());
+        if (parts.length >= 3) {
+            const chunks = parts[2].split('/').map(c => c.trim()).filter(Boolean);
+            parsedSteps.push({
+                step: parts[0] || `Bước ${idx + 1}`,
+                vi: parts[1],
+                chunks: chunks.length > 0 ? chunks : [parts[2]]
+            });
+        }
+    });
+
+    if (parsedSteps.length === 0) {
+        alert("Vui lòng nhập ít nhất 1 dòng đúng cú pháp: Tên bước | Nghĩa tiếng Việt | Cụm 1 / Cụm 2 / Cụm 3");
+        return;
+    }
+
+    const existingDeck = allDecks[currentDeckIndex];
+    if (existingDeck.club === club) {
+        existingDeck.examPrompt = prompt;
+        existingDeck.steps = parsedSteps;
+    } else {
+        allDecks.push({
+            id: `custom_${Date.now()}`,
+            part: currentPart,
+            partLabel: existingDeck.partLabel,
+            club,
+            title: `${club} – Bài mẫu tùy chỉnh (${parsedSteps.length} câu)`,
+            examPrompt: prompt,
+            steps: parsedSteps
+        });
+        currentDeckIndex = allDecks.length - 1;
+    }
+
+    saveStorage();
+    closeCustomModal();
+    loadStep(currentDeckIndex, 0);
+}
+
+// KHỞI CHẠY LẦN ĐẦU (MỞ BÀI FOOD CLUB PART 4 INFORMAL EMAIL)
+updateSavedCounter();
+loadStep(6, 0);
+</script>
+</body>
+</html>
